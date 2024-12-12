@@ -1,0 +1,214 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .textGradientStyle {
+    @apply bg-textGradient inline-block text-transparent bg-clip-text;
+  }
+
+  h2 {
+    @apply text-4xl text-textColor font-bold font-dol;
+  }
+  p {
+    @apply text-2xl text-subColor;
+  }
+  .card {
+    @apply w-[15rem] border-0 bg-bgColor flex flex-col gap-4;
+  }
+  .shop-btn {
+    @apply bg-black text-white rounded-full p-1;
+  }
+}
+@layer utilities {
+  /* Extra small devices */
+  @media screen and (max-width: 576px) {
+    #hero {
+      min-height: 60vh;
+    }
+    #hero div {
+      display: none;
+    }
+    /* about section */
+    #about {
+      margin: 0 2rem;
+    }
+    .decore1 {
+      top: 15rem;
+      right: -2rem;
+    }
+    .decore2 {
+      width: 50%;
+    }
+    /* product section */
+    .card {
+      width: 100%;
+    }
+    .prod-card {
+      flex-direction: column;
+      gap: 4rem;
+    }
+    /* contact section */
+    #contact .imgdeco {
+      width: 5rem;
+    }
+    #contact h2 {
+      font-size: 1.5rem;
+    }
+    .img1 {
+      display: none;
+    }
+    .img-box {
+      display: none;
+    }
+    /* footer style  */
+    footer .box-1 {
+      flex-direction: column-reverse;
+
+      gap: 1.5rem;
+    }
+  }
+
+  /* Small devices */
+  @media screen and (min-width: 576px) and (max-width: 768px) {
+    /* hero section */
+    #hero {
+      min-height: 60vh;
+    }
+    #hero div {
+      margin-left: 3rem;
+      margin-bottom: 3rem;
+    }
+    h1 {
+      font-size: 2.5rem !important;
+    }
+    #hero p {
+      font-size: 1.5rem;
+    }
+    /* about section */
+    #about {
+      margin: 0 2rem;
+    }
+    .decore1 {
+      top: 15rem;
+      right: -2rem;
+    }
+    .decore2 {
+      width: 50%;
+    }
+    /* product section */
+    .card {
+      width: 100%;
+    }
+    .prod-card {
+      flex-direction: column;
+      gap: 4rem;
+    }
+    /* contact section */
+    #contact .imgdeco {
+      width: 10rem;
+    }
+    #contact h2 {
+      font-size: 3rem;
+    }
+    .img1 {
+      display: none;
+    }
+    .img-box {
+      display: none;
+    }
+    /* footer section */
+    footer .box-1 {
+      flex-direction: column-reverse;
+
+      gap: 1.5rem;
+    }
+  }
+
+  /* Medium devices */
+  @media screen and (min-width: 768px) and (max-width: 992px) {
+    /* hero section */
+    #hero {
+      min-height: 60vh;
+    }
+    #hero div {
+      margin-left: 3rem;
+      margin-bottom: 3rem;
+    }
+    h1 {
+      font-size: 2.5rem !important;
+    }
+    #hero p {
+      font-size: 1.5rem;
+    }
+    /* about section */
+    #about {
+      margin: 0 2rem;
+    }
+    .decore1 {
+      top: 15rem;
+      right: -2rem;
+    }
+    .decore2 {
+      width: 50%;
+    }
+    /* product section */
+    .card {
+      width: 45%;
+    }
+    .prod-card {
+      flex-wrap: wrap;
+    }
+    /* contact section */
+    #contact .imgdeco {
+      width: 10rem;
+    }
+    #contact h2 {
+      font-size: 3rem;
+    }
+    #contact .img2 {
+      display: none;
+    }
+    .img-sm {
+      display: none;
+    }
+  }
+
+  /* Large devices */
+  @media screen and (min-width: 992px) and (max-width: 1200px) {
+    #hero {
+      background-image: url("/res/hero.png");
+      min-height: 100vh;
+      background-size: cover;
+    }
+    #about .content {
+      width: 75%;
+    }
+    /* contact section */
+    #contact .img2 {
+      display: none;
+    }
+    .img-sm {
+      display: none;
+    }
+  }
+
+  /* Extra large devices */
+  @media screen and (min-width: 1200px) {
+    #hero {
+      background-image: url("/res/hero.png");
+      min-height: 100vh;
+      background-size: cover;
+    }
+    #about .content {
+      width: 50%;
+    }
+    /* contact section */
+    #contact .img2 {
+      display: none;
+    }
+    .img-sm {
+      display: none;
+    }
+  }
+}

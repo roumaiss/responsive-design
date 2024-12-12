@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sàns</title>
+    <!-- styles -->
+    <link href="css/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/input.css" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="flex font-sans text-textColor flex-col">
+    <!-- this is the header -->
+    <header
+      class="mt-0 py-0.5 bg-white md:bg-[rgb(255,255,255,0.22)] fixed w-full z-50"
+    >
+      <nav
+        class="flex justify-between items-center mx-10 sm:mx-20 my-3 relative"
+      >
+        <div class="sm:hidden">
+          <!-- Mobile menu button-->
+          <button
+            type="button"
+            class="relative inline-flex items-center justify-start rounded-md p-2 text-black hover:bg-[rgb(170,222,147)] hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              class="block size-6"
+              fill="none"
+              stroke-width="1.5"
+              stroke="currentColor"
+              aria-hidden="true"
+              data-slot="icon"
+            >
+              <path d="M5 5h14">
+                <animate
+                  fill="freeze"
+                  attributeName="stroke-dashoffset"
+                  dur="0.2s"
+                  values="16;0"
+                />
+              </path>
+              <path d="M5 12h14">
+                <animate
+                  fill="freeze"
+                  attributeName="stroke-dashoffset"
+                  begin="0.2s"
+                  dur="0.2s"
+                  values="16;0"
+                />
+              </path>
+              <path d="M5 19h14">
+                <animate
+                  fill="freeze"
+                  attributeName="stroke-dashoffset"
+                  begin="0.4s"
+                  dur="0.2s"
+                  values="16;0"
+                />
+              </path>
+            </svg>
+          </button>
+        </div>
+        <div class="hidden sm:flex flex-1">
+          <ul class="flex gap-7 font-sans">
+            <li><a href="#about">About</a></li>
+            <li><a href="#product">Shop</a></li>
+            <li><a href="#contact">Membership</a></li>
+          </ul>
+        </div>
+        <div class="flex flex-1 items-center justify-center">
+          <img src="res/logo.svg" alt="Your Company" class="h-10 w-auto" />
+        </div>
+
+        <div class="flex sm:flex-1 justify-end">
+          <ul class="flex gap-7">
+            <li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 48 48"
+              >
+                <g
+                  fill="none"
+                  stroke="#000"
+                  stroke-linejoin="round"
+                  stroke-width="4"
+                >
+                  <path
+                    d="M21 38c9.389 0 17-7.611 17-17S30.389 4 21 4S4 11.611 4 21s7.611 17 17 17Z"
+                  />
+                  <path
+                    stroke-linecap="round"
+                    d="M26.657 14.343A7.98 7.98 0 0 0 21 12a7.98 7.98 0 0 0-5.657 2.343m17.879 18.879l8.485 8.485"
+                  />
+                </g>
+              </svg>
+            </li>
+            <li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="#000"
+                  d="M18 6h-2c0-2.21-1.79-4-4-4S8 3.79 8 6H6c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2m-6-2c1.1 0 2 .9 2 2h-4c0-1.1.9-2 2-2m6 16H6V8h2v2c0 .55.45 1 1 1s1-.45 1-1V8h4v2c0 .55.45 1 1 1s1-.45 1-1V8h2z"
+                />
+              </svg>
+            </li>
+            <li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 16 16"
+              >
+                <g
+                  fill="none"
+                  stroke="#000"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                >
+                  <circle cx="8" cy="6" r="3.25" />
+                  <path d="M2.75 14.25c0-2.5 2-5 5.25-5s5.25 2.5 5.25 5" />
+                </g>
+              </svg>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- this is the main section -->
+    <main>
+      <!-- this is the hero section -->
+      <!-- there is 2 background images , one for small devices and desktop devices -->
+      <section
+        id="hero"
+        class="bg-[url('/res/hero-sm.svg')] bg-contain bg-no-repeat bg-center w-full flex items-center"
+      >
+        <div class="flex flex-col justify-start gap-7 ml-20 mt-[10rem]">
+          <h1 class="text-5xl font-dol text-textColor font-bold">New Series</h1>
+          <p class="text-3xl text-textColor">Quick-drying sports undershirt</p>
+          <button class="max-w-fit py-3 px-5 bg-[rgb(211,233,65)] rounded-full">
+            Shop Now
+          </button>
+        </div>
+      </section>
+
+      <!-- this is the about section -->
+      <section
+        id="about"
+        class="relative mx-[5rem] flex flex-col gap-[25rem] py-10"
+      >
+        <!-- the absolute decore images  -->
+        <img
+          src="res/img2.svg"
+          alt=""
+          class="absolute top-10 right-[-5rem] -z-10 w-1/2 decore1"
+        />
+        <img
+          src="res/img3.svg"
+          alt=""
+          class="absolute top-52 left-0 -z-10 w-1/3 decore2"
+        />
+        <!-- this is the play together image   -->
+        <div>
+          <img src="res/img1.svg" alt="" class="w-[60rem]" />
+        </div>
+        <div class="w-100 content text-justify">
+          <!-- this is the text of about  -->
+          <div class="flex gap-2 items-center">
+            <h2 class="">At</h2>
+            <!-- this is the sans text logo -->
+            <div class="w-[9rem]">
+              <img src="res/aboutlogo.svg" alt="" />
+            </div>
+          </div>
+          <p class="my-10">
+            We focus on women's sports and believe that comfortable and
+            beautiful sports equipment will help you be happier and more
+            confident.
+          </p>
+          <a href="#" class="text-2xl textGradientStyle">LEARN MORE</a>
+        </div>
+      </section>
+      <!-- this is the product section -->
+      <section id="product" class="mx-[5rem] my-[3rem]">
+        <h2>Best sellers</h2>
+        <!-- this is the cards products -->
+        <div class="flex justify-between items-center my-10 prod-card gap-4">
+          <div class="card">
+            <img src="res/img4.svg" alt="" class="w-100" />
+            <h3 class="text-2xl font-bold">Yoga pant 001</h3>
+            <div class="flex justify-between">
+              <img src="res/Frame1.svg" alt="" class="w-1/2" />
+              <button class="shop-btn">Shop Now</button>
+            </div>
+            <hr class="w-full border-t-4 border-black" />
+            <div>
+              <div class="flex justify-between">
+                <p class="text-textColor">Details</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="28"
+                  viewBox="0 0 16 9"
+                >
+                  <path
+                    fill="#000"
+                    d="M12.5 5h-9c-.28 0-.5-.22-.5-.5s.22-.5.5-.5h9c.28 0 .5.22.5.5s-.22.5-.5.5"
+                  />
+                  <path
+                    fill="#000"
+                    d="M10 8.5a.47.47 0 0 1-.35-.15c-.2-.2-.2-.51 0-.71l3.15-3.15l-3.15-3.15c-.2-.2-.2-.51 0-.71s.51-.2.71 0l3.5 3.5c.2.2.2.51 0 .71l-3.5 3.5c-.1.1-.23.15-.35.15Z"
+                  />
+                </svg>
+              </div>
+              <hr class="w-100" />
+              <div class="flex justify-between">
+                <p class="text-textColor">Comments</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="28"
+                  viewBox="0 0 16 9"
+                >
+                  <path
+                    fill="#000"
+                    d="M12.5 5h-9c-.28 0-.5-.22-.5-.5s.22-.5.5-.5h9c.28 0 .5.22.5.5s-.22.5-.5.5"
+                  />
+                  <path
+                    fill="#000"
+                    d="M10 8.5a.47.47 0 0 1-.35-.15c-.2-.2-.2-.51 0-.71l3.15-3.15l-3.15-3.15c-.2-.2-.2-.51 0-.71s.51-.2.71 0l3.5 3.5c.2.2.2.51 0 .71l-3.5 3.5c-.1.1-.23.15-.35.15Z"
+                  />
+                </svg>
+              </div>
+              <hr class="w-100" />
+              <div class="flex justify-between">
+                <p class="text-textColor">Outfits matching</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="28"
+                  viewBox="0 0 16 9"
+                >
+                  <path
+                    fill="#000"
+                    d="M12.5 5h-9c-.28 0-.5-.22-.5-.5s.22-.5.5-.5h9c.28 0 .5.22.5.5s-.22.5-.5.5"
+                  />
+                  <path
+                    fill="#000"
+                    d="M10 8.5a.47.47 0 0 1-.35-.15c-.2-.2-.2-.51 0-.71l3.15-3.15l-3.15-3.15c-.2-.2-.2-.51 0-.71s.51-.2.71 0l3.5 3.5c.2.2.2.51 0 .71l-3.5 3.5c-.1.1-.23.15-.35.15Z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img src="res/img5.svg" alt="" class="w-100" />
+            <h3 class="text-2xl font-bold">Yoga pant 001</h3>
+            <div class="flex justify-between">
+              <img src="res/Frame1.svg" alt="" class="w-1/2" />
+              <button class="shop-btn">Shop Now</button>
+            </div>
+            <hr class="w-full border-t-4 border-black" />
+            <div>
+              <div class="flex justify-between">
+                <p class="text-textColor">Details</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="28"
+                  viewBox="0 0 16 9"
+                >
+                  <path
+                    fill="#000"
+                    d="M12.5 5h-9c-.28 0-.5-.22-.5-.5s.22-.5.5-.5h9c.28 0 .5.22.5.5s-.22.5-.5.5"
+                  />
+                  <path
+                    fill="#000"
+                    d="M10 8.5a.47.47 0 0 1-.35-.15c-.2-.2-.2-.51 0-.71l3.15-3.15l-3.15-3.15c-.2-.2-.2-.51 0-.71s.51-.2.71 0l3.5 3.5c.2.2.2.51 0 .71l-3.5 3.5c-.1.1-.23.15-.35.15Z"
+                  />
+                </svg>
+              </div>
+              <hr class="w-100" />
+              <div class="flex justify-between">
+                <p class="text-textColor">Comments</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="28"
+                  viewBox="0 0 16 9"
+                >
+                  <path
+                    fill="#000"
+                    d="M12.5 5h-9c-.28 0-.5-.22-.5-.5s.22-.5.5-.5h9c.28 0 .5.22.5.5s-.22.5-.5.5"
+                  />
+                  <path
+                    fill="#000"
+                    d="M10 8.5a.47.47 0 0 1-.35-.15c-.2-.2-.2-.51 0-.71l3.15-3.15l-3.15-3.15c-.2-.2-.2-.51 0-.71s.51-.2.71 0l3.5 3.5c.2.2.2.51 0 .71l-3.5 3.5c-.1.1-.23.15-.35.15Z"
+                  />
+                </svg>
+              </div>
+              <hr class="w-100" />
+              <div class="flex justify-between">
+                <p class="text-textColor">Outfits matching</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="28"
+                  viewBox="0 0 16 9"
+                >
+                  <path
+                    fill="#000"
+                    d="M12.5 5h-9c-.28 0-.5-.22-.5-.5s.22-.5.5-.5h9c.28 0 .5.22.5.5s-.22.5-.5.5"
+                  />
+                  <path
+                    fill="#000"
+                    d="M10 8.5a.47.47 0 0 1-.35-.15c-.2-.2-.2-.51 0-.71l3.15-3.15l-3.15-3.15c-.2-.2-.2-.51 0-.71s.51-.2.71 0l3.5 3.5c.2.2.2.51 0 .71l-3.5 3.5c-.1.1-.23.15-.35.15Z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img src="res/img6.svg" alt="" class="w-100" />
+            <h3 class="text-2xl font-bold">Yoga pant 001</h3>
+            <div class="flex justify-between">
+              <img src="res/Frame1.svg" alt="" class="w-1/2" />
+              <button class="shop-btn">Shop Now</button>
+            </div>
+            <hr class="w-full border-t-4 border-black" />
+            <div>
+              <div class="flex justify-between">
+                <p class="text-textColor">Details</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="28"
+                  viewBox="0 0 16 9"
+                >
+                  <path
+                    fill="#000"
+                    d="M12.5 5h-9c-.28 0-.5-.22-.5-.5s.22-.5.5-.5h9c.28 0 .5.22.5.5s-.22.5-.5.5"
+                  />
+                  <path
+                    fill="#000"
+                    d="M10 8.5a.47.47 0 0 1-.35-.15c-.2-.2-.2-.51 0-.71l3.15-3.15l-3.15-3.15c-.2-.2-.2-.51 0-.71s.51-.2.71 0l3.5 3.5c.2.2.2.51 0 .71l-3.5 3.5c-.1.1-.23.15-.35.15Z"
+                  />
+                </svg>
+              </div>
+              <hr class="w-100" />
+              <div class="flex justify-between">
+                <p class="text-textColor">Comments</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="28"
+                  viewBox="0 0 16 9"
+                >
+                  <path
+                    fill="#000"
+                    d="M12.5 5h-9c-.28 0-.5-.22-.5-.5s.22-.5.5-.5h9c.28 0 .5.22.5.5s-.22.5-.5.5"
+                  />
+                  <path
+                    fill="#000"
+                    d="M10 8.5a.47.47 0 0 1-.35-.15c-.2-.2-.2-.51 0-.71l3.15-3.15l-3.15-3.15c-.2-.2-.2-.51 0-.71s.51-.2.71 0l3.5 3.5c.2.2.2.51 0 .71l-3.5 3.5c-.1.1-.23.15-.35.15Z"
+                  />
+                </svg>
+              </div>
+              <hr class="w-100" />
+              <div class="flex justify-between">
+                <p class="text-textColor">Outfits matching</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="28"
+                  viewBox="0 0 16 9"
+                >
+                  <path
+                    fill="#000"
+                    d="M12.5 5h-9c-.28 0-.5-.22-.5-.5s.22-.5.5-.5h9c.28 0 .5.22.5.5s-.22.5-.5.5"
+                  />
+                  <path
+                    fill="#000"
+                    d="M10 8.5a.47.47 0 0 1-.35-.15c-.2-.2-.2-.51 0-.71l3.15-3.15l-3.15-3.15c-.2-.2-.2-.51 0-.71s.51-.2.71 0l3.5 3.5c.2.2.2.51 0 .71l-3.5 3.5c-.1.1-.23.15-.35.15Z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img src="res/img7.svg" alt="" class="w-100" />
+            <h3 class="text-2xl font-bold">Yoga pant 001</h3>
+            <div class="flex justify-between">
+              <img src="res/Frame1.svg" alt="" class="w-1/2" />
+              <button class="shop-btn">Shop Now</button>
+            </div>
+            <hr class="w-full border-t-4 border-black" />
+            <div>
+              <div class="flex justify-between">
+                <p class="text-textColor">Details</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="28"
+                  viewBox="0 0 16 9"
+                >
+                  <path
+                    fill="#000"
+                    d="M12.5 5h-9c-.28 0-.5-.22-.5-.5s.22-.5.5-.5h9c.28 0 .5.22.5.5s-.22.5-.5.5"
+                  />
+                  <path
+                    fill="#000"
+                    d="M10 8.5a.47.47 0 0 1-.35-.15c-.2-.2-.2-.51 0-.71l3.15-3.15l-3.15-3.15c-.2-.2-.2-.51 0-.71s.51-.2.71 0l3.5 3.5c.2.2.2.51 0 .71l-3.5 3.5c-.1.1-.23.15-.35.15Z"
+                  />
+                </svg>
+              </div>
+              <hr class="w-100" />
+              <div class="flex justify-between">
+                <p class="text-textColor">Comments</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="28"
+                  viewBox="0 0 16 9"
+                >
+                  <path
+                    fill="#000"
+                    d="M12.5 5h-9c-.28 0-.5-.22-.5-.5s.22-.5.5-.5h9c.28 0 .5.22.5.5s-.22.5-.5.5"
+                  />
+                  <path
+                    fill="#000"
+                    d="M10 8.5a.47.47 0 0 1-.35-.15c-.2-.2-.2-.51 0-.71l3.15-3.15l-3.15-3.15c-.2-.2-.2-.51 0-.71s.51-.2.71 0l3.5 3.5c.2.2.2.51 0 .71l-3.5 3.5c-.1.1-.23.15-.35.15Z"
+                  />
+                </svg>
+              </div>
+              <hr class="w-100" />
+              <div class="flex justify-between">
+                <p class="text-textColor">Outfits matching</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="28"
+                  viewBox="0 0 16 9"
+                >
+                  <path
+                    fill="#000"
+                    d="M12.5 5h-9c-.28 0-.5-.22-.5-.5s.22-.5.5-.5h9c.28 0 .5.22.5.5s-.22.5-.5.5"
+                  />
+                  <path
+                    fill="#000"
+                    d="M10 8.5a.47.47 0 0 1-.35-.15c-.2-.2-.2-.51 0-.71l3.15-3.15l-3.15-3.15c-.2-.2-.2-.51 0-.71s.51-.2.71 0l3.5 3.5c.2.2.2.51 0 .71l-3.5 3.5c-.1.1-.23.15-.35.15Z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- this is the Call-to-Action section -->
+      <section id="contact">
+        <div class="relative flex items-center justify-center">
+          <!-- this is the image for desktop -->
+          <img src="res/img8.svg" alt="" class="w-full mx-auto img1" />
+          <!-- this is the image for mobile -->
+          <img src="res/img10.svg" alt="" class="w-full mx-auto img2" />
+          <div class="absolute flex items-center">
+            <h2 class="text-7xl">Let’s</h2>
+            <img src="res/aboutlogo.svg" alt="" class="w-[20rem] imgdeco" />
+            <h2 class="text-7xl">together</h2>
+          </div>
+        </div>
+        <div class="flex flex-col gap-7 items-center my-9">
+          <h2>@SansSports</h2>
+          <p class="text-center">Maybe you are the NEXT ambassadors.</p>
+          <a href="#" class="text-2xl textGradientStyle">LEARN MORE</a>
+        </div>
+        <!-- this is the image for mobile -->
+        <img src="res/img11.svg" alt="" class="w-full img-sm" />
+        <!-- this is the image for desktop -->
+        <div class="flex justify-between items-center gap-10 img-box mx-[5rem]">
+          <img src="res/img12.svg" alt="" class="w-[30%]" />
+          <img src="res/img13.svg" alt="" class="w-[30%]" />
+          <img src="res/img14.svg" alt="" class="w-[30%]" />
+        </div>
+      </section>
+    </main>
+    <!-- this is the Footer section -->
+    <footer id="footer" class="bg-[#F7F7F7] p-10 mt-20">
+      <div class="flex justify-between box-1">
+        <div class="flex justify-start gap-20">
+          <ul>
+            <li>Contact</li>
+            <li>About</li>
+            <li>Community</li>
+            <li>#Sans Ambassadors</li>
+            <li>Shop</li>
+            <li>Gift Cards</li>
+            <li>Coupons</li>
+          </ul>
+          <ul>
+            <li>Order History</li>
+            <li>FAQs</li>
+            <li>Shipping & Handling</li>
+            <li>Refunds & Exchanges</li>
+            <li>Terms & Conditions</li>
+            <li>Press</li>
+            <li>Accessibility & Statement</li>
+          </ul>
+        </div>
+        <!-- this is the icons -->
+        <div class="flex gap-10">
+          <a href="#"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="#000"
+                d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95"
+              /></svg></a>
+          <a href="#"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="#000"
+                d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3"
+              /></svg></a>
+          <a href="#"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 32 32"
+            >
+              <g fill="#000">
+                <path
+                  d="M16-.034C7.159-.034-.035 7.158-.035 16S7.159 32.034 16 32.034S32.035 24.842 32.035 16S24.841-.034 16-.034m0 31C7.748 30.966 1.035 24.252 1.035 16S7.748 1.034 16 1.034S30.965 7.748 30.965 16S24.252 30.966 16 30.966"
+                />
+                <path
+                  d="M24.794 11.046a3.7 3.7 0 0 0 .273-.643a.535.535 0 0 0-.781-.623a6 6 0 0 1-1.646.673a3.83 3.83 0 0 0-2.562-.987a3.82 3.82 0 0 0-3.814 3.973a8.82 8.82 0 0 1-5.735-3.178a.536.536 0 0 0-.876.07a3.81 3.81 0 0 0-.066 3.721a.6.6 0 0 0-.214.078a.57.57 0 0 0-.264.481c0 1.135.505 2.177 1.319 2.885l-.035.035a.53.53 0 0 0-.108.518a3.82 3.82 0 0 0 2.184 2.365a6.13 6.13 0 0 1-3.406.579a.545.545 0 0 0-.566.352a.536.536 0 0 0 .215.63a9.84 9.84 0 0 0 5.319 1.559c6.18 0 9.874-5.02 9.874-9.873l-.001-.164a7.1 7.1 0 0 0 1.541-1.66a.535.535 0 0 0-.651-.791m-1.745 1.755a.54.54 0 0 0-.222.461q.009.199.009.398c0 4.328-3.293 8.805-8.804 8.805a8.8 8.8 0 0 1-2.887-.488a7.1 7.1 0 0 0 3.045-1.39a.535.535 0 0 0-.32-.955a2.75 2.75 0 0 1-2.194-1.162q.38-.026.742-.124a.534.534 0 0 0-.036-1.04a2.74 2.74 0 0 1-2.081-1.905q.4.101.812.115c.235-.001.453-.145.526-.371s-.013-.475-.212-.607a2.75 2.75 0 0 1-1.143-2.945a9.88 9.88 0 0 0 6.568 2.972c.176.001.33-.062.437-.191s.148-.3.11-.464a2.75 2.75 0 0 1 4.682-2.506a.54.54 0 0 0 .494.159q.248-.05.489-.115a3 3 0 0 1-.226.151a.535.535 0 0 0 .338.988l.182-.023a6 6 0 0 1-.309.237"
+                />
+              </g></svg></a>
+        </div>
+      </div>
+      <!-- rights text -->
+      <div>
+        <p class="mt-10 text-center">
+          © 2024 Sans. All Rights Reserved. Privacy Policy
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
